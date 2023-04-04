@@ -6,7 +6,7 @@ const ordersController = new OrdersController();
 const orderRouter = Router();
 
 // GET ORDERS
-orderRouter.get("/", ordersController.getAllOrders);
+orderRouter.get("/", ordersController.getAllOrder);
 
 // GET ORDER BY ID
 orderRouter.get("/:id", ordersController.getOrderById);

@@ -7,11 +7,17 @@ const orderSchema = new Schema({
         type: String
     },
 
+    customer_id: {
+        type: Schema.Types.ObjectId,
+        ref: "Customer",
+        required: true
+    },
+
     items: [
         {
             type: Schema.Types.ObjectId,
-            ref: "Product" // Will give us access to populate method
-            // will reference
+            ref: "Product",
+            required: true
         }
     ]
 });

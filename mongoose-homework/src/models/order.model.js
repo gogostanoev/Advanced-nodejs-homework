@@ -8,8 +8,8 @@ class OrdersModel {
         this.mongo_model = mongoose.model("Order", orderSchema)
     }
 
-    async getAllOrders(){
-        const orders = await this.mongo_model.find().populate('items'); 
+    async getAllOrder(){
+        const orders = await this.mongo_model.find().populate("items", "customer_id name email phone address")
         //populate will take the ID VALUE and repalce it with the real object from the Product Model
 
         return orders

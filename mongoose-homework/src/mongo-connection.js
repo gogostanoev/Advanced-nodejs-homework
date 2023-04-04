@@ -1,9 +1,10 @@
 import * as dotenv from "dotenv";
 import mongoose from "mongoose";
 
-dotenv.config(); //will read from .env
+dotenv.config(); 
 
 const MONGO_URL = process.env.MONGO_URL;
+// const MONGO_URL = "mongodb+srv://gogomongo:gogomongo123@cluster0.5nl27cc.mongodb.net/?retryWrites=true&w=majority"
 
 export const mongo_connection = async () => {
     try {

@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
 import productSchema from "../mongo_schemas/products.schema.js";
-import exp from "constants";
 
 class ProductModel {
     // This is the product model for MONGO
