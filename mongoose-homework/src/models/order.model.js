@@ -9,14 +9,14 @@ class OrdersModel {
     }
 
     async getAllOrder(){
-        const orders = await this.mongo_model.find().populate("items", "customer_id name email phone address")
+        const orders = await this.mongo_model.find().populate("items customer_id", "name email phone address")
         //populate will take the ID VALUE and repalce it with the real object from the Product Model
 
         return orders
     };
 
     async getOrderById(orderId){
-        const order = await this.mongo_model.findById(orderId);
+        const order = await this.mongo_model.findById(orderId).populate("items customer_id", "name email phone address");
 
         return order
     }
