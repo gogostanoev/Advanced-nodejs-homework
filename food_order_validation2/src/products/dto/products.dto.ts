@@ -20,9 +20,12 @@ export class ProductDto {
 
 
 export class UpdateProductDto {
+    @ApiProperty()
     id: string;
 
+    @ApiProperty()
     productName: string;
 
+    @ApiProperty()
     productPrice: number;
 }

@@ -9,6 +9,7 @@ export class OrderDto {
 
 
 export class UpdateOrderDto {
+    @ApiProperty()
     @IsNotEmpty()
     orderName: string
 }
