@@ -46,7 +46,7 @@ export class AuthService {
     });
 
     console.log(userFound)
-    const payload = { username: userFound.username, id: userFound.id };
+    const payload = { username: userFound.username, id: userFound.id, role: userFound.role };
     const access_token = this.jwtService.sign(payload, { expiresIn: '15m' });
     const refresh_token = this.jwtService.sign(payload, { expiresIn: '7d', secret: 'refresh_token_secret' });
 
